@@ -8,8 +8,14 @@ class ObservableAppState extends EventEmitter {
   /**@type {import('./models/Account.js').Account | null} */
   account = null
 
-  /**@type {Pokemon} */
+  /**@type {{name: String, index: String, url: String}[]} */
   pokemonsApi = []
+
+  /**@type {Pokemon} */
+  activePokemon = null
+
+  /**@type {Pokemon[]} */
+  myPokemons = []
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
