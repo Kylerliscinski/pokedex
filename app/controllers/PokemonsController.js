@@ -25,7 +25,7 @@ export class PokemonsController {
 
   async getPokemonByName(pokemonName) {
     try {
-      console.log('pokemons', pokemonName);
+      console.log('🦧pokemon', pokemonName);
       await pokemonsService.getPokemonByName(pokemonName)
     } catch (error) {
       console.error(error)
@@ -43,5 +43,6 @@ export class PokemonsController {
   drawActivePokemon() {
     const activePokemon = AppState.activePokemon
     setHTML('active-pokemon', activePokemon.ActivePokemonCard)
+    console.log('🎬', activePokemon);
   }
 }

@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { Pokemon } from "../models/Pokemon.js";
 
 
 // @ts-ignore
@@ -16,9 +17,11 @@ class PokemonsService {
     AppState.pokemonsApi = response.data.results
   }
 
-  async getPokemonByName(name) {
-    const response = await pokemonApi.get(`pokemon/${name}`)
+  async getPokemonByName(pokemonName) {
+    const response = await pokemonApi.get(`pokemon/${pokemonName}`)
     console.log('pokemon index', response.data);
+    const pokemon = new Pokemon(response.data)
+    AppState.activePokemon = pokemon
   }
 }
 
