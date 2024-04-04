@@ -7,7 +7,7 @@ import { api } from "./AxiosService.js"
 class SandboxPokemonsService {
 
   async getMyPokedex() {
-    const response = await api.get('api/pokemon')
+    const response = await api.get('/api/pokemon')
     // console.log('📕🦧', response.data);
     const myPokemons = response.data.map(pokemon => new Pokemon(pokemon))
     AppState.myPokemons = myPokemons
@@ -15,7 +15,7 @@ class SandboxPokemonsService {
 
   async savePokemonToPokedex() {
     console.log('saving', AppState.activePokemon.name);
-    const response = await api.post('api/pokemon', AppState.activePokemon)
+    const response = await api.post('/api/pokemon', AppState.activePokemon)
     console.log('💾🦧', response.data);
     const pokemon = new Pokemon(response.data)
     AppState.myPokemons.push(pokemon)
