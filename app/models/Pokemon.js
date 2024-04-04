@@ -43,7 +43,7 @@ export class Pokemon {
 
   get MyPokemonTemplate() {
     return `
-    <div onclick="app.SandboxPokemonController.setActivePokemonFromPokedex('${this.name}')" class="row align-items-center border-bottom border-primary pb-1 mb-2 selectable">
+    <div onclick="app.SandboxPokemonsController.setActivePokemonFromPokedex('${this.name}')" class="row align-items-center border-bottom border-primary pb-1 mb-2 selectable">
       <div class="col">${this.name}</div>
       </div>
     </div>

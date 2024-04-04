@@ -39,6 +39,7 @@ export class SandboxPokemonsController {
   }
 
   setActivePokemonFromPokedex(pokemonName) {
+    console.log('Hi');
     sandboxPokemonsService.setActivePokemonFromPokedex(pokemonName)
   }
 
