@@ -18,6 +18,7 @@ class SandboxPokemonsService {
     const response = await api.post('/api/pokemon', AppState.activePokemon)
     console.log('💾🦧', response.data);
     const pokemon = new Pokemon(response.data)
+    console.log('hi')
     AppState.myPokemons.push(pokemon)
   }
 
