@@ -5,7 +5,7 @@ export class Pokemon {
     this.name = data.name
     this.height = data.height
     this.weight = data.weight
-    this.type = data.types[0].type.name
+    this.types = data.types[0].type.name
     this.img = data.sprites.front_default
   }
 
@@ -30,7 +30,7 @@ export class Pokemon {
       <h2>${this.name}</h2>
       </div>
       <div class="card-body">
-      <p>Type: ${this.type}</p>
+      <p>Type: ${this.types}</p>
       <p>Height: ${this.height}</p>
       <p>Weight: ${this.weight}</p>
       </div>
