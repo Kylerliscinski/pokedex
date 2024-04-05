@@ -47,4 +47,8 @@ export class SandboxPokemonsController {
     const pokemonCount = AppState.myPokemons.length
     setText('pokemon-count', `${pokemonCount}`)
   }
+
+  deletePokemonFromPokedex() {
+
+  }
 }
